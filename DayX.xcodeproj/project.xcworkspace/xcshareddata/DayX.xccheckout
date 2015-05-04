@@ -5,13 +5,21 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>22F112FC-70B4-4E9F-A91D-D0726C793A01</string>
+=======
+	<string>85962991-9836-443B-9FC1-A8BF3F437D16</string>
+>>>>>>> 4667933c81d3cbb74b22c38f7e82bb8f6231d056
 	<key>IDESourceControlProjectName</key>
 	<string>DayX</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8466339990A80563F05BC559469B00CD06339361</key>
+<<<<<<< HEAD
 		<string>https://github.com/DevMech/Day-X.git</string>
+=======
+		<string>https://github.com/parkerdonat/Day-X.git</string>
+>>>>>>> 4667933c81d3cbb74b22c38f7e82bb8f6231d056
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DayX.xcodeproj</string>
@@ -21,7 +29,11 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
+<<<<<<< HEAD
 	<string>https://github.com/DevMech/Day-X.git</string>
+=======
+	<string>https://github.com/parkerdonat/Day-X.git</string>
+>>>>>>> 4667933c81d3cbb74b22c38f7e82bb8f6231d056
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
