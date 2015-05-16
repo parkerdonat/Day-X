@@ -49,6 +49,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ff7-Q6-DFg" id="c3H-98-W94"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="Xxb-2V-c5y" customClass="ListTableViewDataSource"/>
@@ -108,7 +111,15 @@
                             <constraint firstItem="U05-wh-k3z" firstAttribute="top" secondItem="biD-In-1nD" secondAttribute="bottom" constant="8" symbolic="YES" id="rlP-Me-RRU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6Ow-Xa-T5U">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="pmG-pF-txW">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ftc-JK-fAX" id="qml-pR-bHO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="bodyTextView" destination="Y7s-HU-ZB7" id="YZD-Yl-sPY"/>
                         <outlet property="textField" destination="ApE-Cw-Nvx" id="Y6Z-t3-vLa"/>
                     </connections>
                 </viewController>
