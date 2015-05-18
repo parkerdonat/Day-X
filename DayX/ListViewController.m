@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DayX
 //
-//  Created by Caleb Hicks on 4/10/15.
+//  Created by Parker Donat on 4/10/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
@@ -43,7 +43,6 @@
         Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
         
         viewController.entry = entry;
-        
     }
 }
 

@@ -11,9 +11,7 @@
 
 @implementation ListTableViewDataSource
 
-//static NSString * const cellIdentifier = @"entryCell";
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
     
@@ -21,11 +19,9 @@
     cell.textLabel.text = entry.title;
     
     return cell;
-    
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [EntryController sharedInstance].entries.count;
 }
 

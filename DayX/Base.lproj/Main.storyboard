@@ -111,6 +111,9 @@
                             <constraint firstItem="U05-wh-k3z" firstAttribute="top" secondItem="biD-In-1nD" secondAttribute="bottom" constant="8" symbolic="YES" id="rlP-Me-RRU"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="ryP-5a-eor"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="6Ow-Xa-T5U">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="pmG-pF-txW">
                             <connections>
@@ -125,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veA-QB-PhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="480"/>
+            <point key="canvasLocation" x="2297" y="590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="toz-bm-ik6">
