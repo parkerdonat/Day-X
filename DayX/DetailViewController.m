@@ -39,7 +39,7 @@
     if (self.entry) {
         self.entry.title = self.textField.text;
         self.entry.bodyText = self.bodyTextView.text;
-        self.entry.timeStamp = [NSDate new];
+        self.entry.timestamp = [NSDate new];
     } else {
   // remember, the createEntry method returns the created Entry object
         self.entry = [[EntryController sharedInstance] createEntryWithTitle:self.textField.text bodyText:self.bodyTextView.text];

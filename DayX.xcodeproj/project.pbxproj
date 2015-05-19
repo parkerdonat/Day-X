@@ -15,7 +15,9 @@
 		68FFDFEA1AD8144B009F5D0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FFDFE81AD8144B009F5D0A /* LaunchScreen.xib */; };
 		68FFDFF61AD8144B009F5D0A /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFF51AD8144B009F5D0A /* DayXTests.m */; };
 		C40BF4A71AF82B77009001BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40BF4A61AF82B77009001BA /* DetailViewController.m */; };
-		DDD3F4151B064C6600DF5B5A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD3F4141B064C6600DF5B5A /* Entry.m */; };
+		DD9F65881B0BC37C00344A2E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD9F65861B0BC37C00344A2E /* Model.xcdatamodeld */; };
+		DD9F658B1B0BC40D00344A2E /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9F658A1B0BC40D00344A2E /* Entry.m */; };
+		DD9F658E1B0BC49500344A2E /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9F658D1B0BC49500344A2E /* Stack.m */; };
 		DDD3F4181B064D2600DF5B5A /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD3F4171B064D2600DF5B5A /* EntryController.m */; };
 		DDDD802D1AF81BDB00AD49D2 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDD802C1AF81BDB00AD49D2 /* ListTableViewDataSource.m */; };
 /* End PBXBuildFile section */
@@ -46,8 +48,11 @@
 		68FFDFF51AD8144B009F5D0A /* DayXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayXTests.m; sourceTree = "<group>"; };
 		C40BF4A51AF82B77009001BA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C40BF4A61AF82B77009001BA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		DDD3F4131B064C6600DF5B5A /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
-		DDD3F4141B064C6600DF5B5A /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		DD9F65871B0BC37C00344A2E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DD9F65891B0BC40D00344A2E /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		DD9F658A1B0BC40D00344A2E /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		DD9F658C1B0BC49500344A2E /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		DD9F658D1B0BC49500344A2E /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		DDD3F4161B064D2600DF5B5A /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
 		DDD3F4171B064D2600DF5B5A /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 		DDDD802B1AF81BDB00AD49D2 /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
@@ -102,12 +107,15 @@
 				C40BF4A51AF82B77009001BA /* DetailViewController.h */,
 				C40BF4A61AF82B77009001BA /* DetailViewController.m */,
 				68FFDFE31AD8144B009F5D0A /* Main.storyboard */,
-				DDD3F4131B064C6600DF5B5A /* Entry.h */,
-				DDD3F4141B064C6600DF5B5A /* Entry.m */,
 				DDD3F4161B064D2600DF5B5A /* EntryController.h */,
 				DDD3F4171B064D2600DF5B5A /* EntryController.m */,
+				DD9F65891B0BC40D00344A2E /* Entry.h */,
+				DD9F658A1B0BC40D00344A2E /* Entry.m */,
+				DD9F65861B0BC37C00344A2E /* Model.xcdatamodeld */,
 				68FFDFE61AD8144B009F5D0A /* Images.xcassets */,
 				68FFDFE81AD8144B009F5D0A /* LaunchScreen.xib */,
+				DD9F658C1B0BC49500344A2E /* Stack.h */,
+				DD9F658D1B0BC49500344A2E /* Stack.m */,
 				68FFDFD91AD8144B009F5D0A /* Supporting Files */,
 			);
 			path = DayX;
@@ -239,10 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDD3F4151B064C6600DF5B5A /* Entry.m in Sources */,
+				DD9F658E1B0BC49500344A2E /* Stack.m in Sources */,
 				C40BF4A71AF82B77009001BA /* DetailViewController.m in Sources */,
 				68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */,
+				DD9F65881B0BC37C00344A2E /* Model.xcdatamodeld in Sources */,
 				68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */,
+				DD9F658B1B0BC40D00344A2E /* Entry.m in Sources */,
 				DDD3F4181B064D2600DF5B5A /* EntryController.m in Sources */,
 				DDDD802D1AF81BDB00AD49D2 /* ListTableViewDataSource.m in Sources */,
 				68FFDFDC1AD8144B009F5D0A /* main.m in Sources */,
@@ -452,6 +462,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD9F65861B0BC37C00344A2E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD9F65871B0BC37C00344A2E /* Model.xcdatamodel */,
+			);
+			currentVersion = DD9F65871B0BC37C00344A2E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 68FFDFCE1AD8144B009F5D0A /* Project object */;
 }

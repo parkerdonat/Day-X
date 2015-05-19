@@ -7,6 +7,7 @@
 //
 
 #import "EntryController.h"
+#import "Stack.h"
 
 @interface EntryController ()
 
@@ -23,43 +24,55 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[EntryController alloc] init];
         
-        sharedInstance.entries = [NSArray new];
+//        sharedInstance.entries = [NSArray new];
     });
     return sharedInstance;
 }
 
 - (Entry *)createEntryWithTitle:(NSString *)title bodyText:(NSString *)bodyText {
-    Entry *entry = [Entry new];
+    Entry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"Entry" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     entry.title = title;
     entry.bodyText = bodyText;
-    entry.timeStamp = [NSDate new];
+    entry.timestamp = [NSDate new];
     
-    [self addEntry:entry];
+    [self saveToPersistentStorage];
     
     return entry;
 }
 
+- (NSArray *)entries {
+    
+    NSFetchRequest *fetcheRequest = [[NSFetchRequest alloc] initWithEntityName:@"Entry"];
+    
+    NSArray *allEntries = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetcheRequest error:nil];
+    
+    return allEntries;
+}
+
 // Implement the addEntry method: it needs to create a mutable version of the controller's entries array, add the entry that's passed in, and then re-set the controller's Entries array.
-- (void)addEntry:(Entry *)entry{
-    if (!entry) {
-        return;
-    }
-    
-    NSMutableArray *mutableEntries = self.entries.mutableCopy;
-    [mutableEntries addObject:entry];
-    
-    self.entries = mutableEntries;
+//- (void)addEntry:(Entry *)entry{
+//    if (!entry) {
+//        return;
+//    }
+//    
+//    NSMutableArray *mutableEntries = self.entries.mutableCopy;
+//    [mutableEntries addObject:entry];
+//    
+//    self.entries = mutableEntries;
+//}
+
+//- (void)save {
+//    [self saveToPersistentStorage];
+//}
+
+- (void)saveToPersistentStorage {
+    [[Stack sharedInstance].managedObjectContext save:nil];
 }
 
 - (void)removeEntry:(Entry *)entry{
-    if (!entry) {
-        return;
-    }
+    [[Stack sharedInstance].managedObjectContext deleteObject:entry];
     
-    NSMutableArray *mutableEntries = self.entries.mutableCopy;
-    [mutableEntries addObject:entry];
-    
-    self.entries = mutableEntries;
+    [self saveToPersistentStorage];
 }
 
 @end
